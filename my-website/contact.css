@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f1d1f;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-heading {
+    color: limegreen;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-top: 5px;
+}
+
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-info {
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-info i {
+    color: limegreen;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contact-info a {
+    color: limegreen;
+    text-decoration: none;
+}
+
+.contact-form {
+    flex: 1 1 350px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid limegreen;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    background-color: limegreen;
+    color: #000;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #90ee90;
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    border-right: 2px solid limegreen;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    color: limegreen;
+    font-size: 32px;
+    width: 0;
+    font-family: 'Courier New', monospace;
+    animation: typing 3s steps(30, end) forwards;
+    /* Only typing animation, no blinking loop */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 13ch;
+    }
+
+    /* Adjust width to fit your text length exactly */
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Placeholder text color (green) */
+input::placeholder,
+textarea::placeholder {
+    color: #07552a;
+    /* Bright green */
+    opacity: 1;
+    /* Make sure it's fully visible */
+    font-weight: bold;
+}

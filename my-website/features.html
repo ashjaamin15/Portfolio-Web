@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features</title>
+  <link rel="stylesheet" href="features.css" />
+</head>
+
+<body>
+  <a href="features.html" class="active"></a>
+  <section class="features-section">
+    <h2 class="typewriter">| Features</h2>
+
+
+    <div class="features-container">
+      <div class="feature-card">
+        <div class="icon">💻</div>
+        <h3 class="zoom-clear">| Developer</h3>
+        <p>
+          "I'm a web developer skilled in HTML and CSS, creating responsive and visually appealing websites with clean,
+          efficient code."
+        </p>
+      </div>
+
+      <div class="feature-card main-feature">
+        <div class="icon">🎨</div>
+        <h3>CREATIVE DESIGN</h3>
+        <p>
+          "Passionate about creating visually engaging and impactful designs. Skilled in combining creativity with
+          strategy to deliver unique branding, digital, and print materials."
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">➕</div>
+        <h3>HIGH QUALITY</h3>
+        <p>
+          Committed to delivering high-quality work with attention to detail, consistency, and professionalism —
+          ensuring every project meets the highest standards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Apply fade-in when page loads
+    document.body.classList.add('fade-in');
+
+    // Add click effect to all internal links
+    const links = document.querySelectorAll("a[href^='#'], a[href$='.html'], a[href='/']");
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        const target = link.getAttribute("href");
+        if (target && target !== "#") {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = target;
+          }, 500); // time matches CSS fadeOut duration
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

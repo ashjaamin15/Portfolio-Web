@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css" href="features.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Ashja Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="logo" class="typewriter">Syed Ashja</div>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                 <li><a href="skills.html">Skills</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                   <li><a href="testimonials.html">Testimonials</a></li>
+                    
+            </ul>
+        </nav>
+        <a href="contact.html" class="contact-btn">Contact Me</a>
+         
+         
+    </header>
+
+    <main class="container">
+        <div class="left">
+            <p class="hello"><span class="line"></span> Hello</p>
+            <h1>I am <span class="highlight">Syed Muhammad Ashja</span></h1>
+            <h3>Full-Stack Developer | Visual Designer </h3>
+            
+                I'M A CREATIVE DESIGNER AND WEB DEVELOPER.<br>
+                I BUILD MODERN, RESPONSIVE, AND USER-FOCUSED DESIGNS.<br>
+                COMBINING AESTHETICS WITH FUNCTIONALITY TO DELIVER RESULTS.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/me/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="mailto:ashjaamin15@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="contact.html" class="contact-btn"> <Strong>Contact Me</Strong></a>
+               
+        </div>
+
+        <div class="right">
+            <div class="photo-frame">
+                <img src="profile.png" alt="Syed Ashja">
+            </div>
+        </div>
+    </main>
+
+  <!-- Font Awesome CDN (paste inside <head> of HTML if not already added) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<footer class="footer fade-in-on-scroll">
+  <div class="footer-container">
+    <div class="footer-top">
+      <h3>Full-Stack Developer | Visual Designer</h3>
+      <p> Designing What You See, Developing What You Feel</p>
+    </div>
+
+    <div class="footer-links">
+      <p>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:ashjaamin15@gmail.com">ashjaamin15@gmail.com</a>
+      </p>
+      <p>
+        <i class="fab fa-instagram"></i>
+        <a href="https://www.instagram.com/dreaminggraphic.designer" target="_blank">@dreaminggraphic.designer</a>
+      </p>
+      <p>
+        <i class="fab fa-facebook"></i>
+        <a href="https://www.facebook.com/me/" target="_blank">Dreaming Graphic Designer</a>
+      </p>
+    </div>
+
+    <div class="subscribe-box">
+      <form action="#">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit"><b>SUBSCRIBE</b></button>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Syed Muhammad Ashja. All rights reserved.</p>
+    </div>
+  </div>
+  
+</footer>
+
+<script>
+  // Apply fade-in when page loads
+  document.body.classList.add('fade-in');
+
+  // Add click effect to all internal links
+  const links = document.querySelectorAll("a[href^='#'], a[href$='.html'], a[href='/']");
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const target = link.getAttribute("href");
+      if (target && target !== "#") {
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = target;
+        }, 500); // time matches CSS fadeOut duration
+      }
+    });
+  });
+</script>
+<script>
+  const faders = document.querySelectorAll('.fade-in-on-scroll');
+
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -100px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(
+    entries,
+    observer
+  ) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+
+</body>
+
+</html>

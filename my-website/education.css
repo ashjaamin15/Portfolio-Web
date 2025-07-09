@@ -1,0 +1,156 @@
+/* education.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f2c27;
+  color: #fff;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5aff60;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Title */
+.main-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px 0 40px;
+}
+
+/* Container */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 60px;
+}
+
+/* Content Layout */
+.education-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Steps Left */
+.education-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step {
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+  width: 160px;
+  margin: 10px 0;
+}
+
+.completed {
+  background-color: #28ff44;
+  color: black;
+}
+
+.ongoing {
+  background-color: white;
+  color: black;
+}
+
+.line-connector {
+  width: 2px;
+  height: 40px;
+  background-color: #28ff44;
+}
+
+/* Right Box */
+.education-box {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 500px;
+  color: black;
+}
+
+.education-box h2 {
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.education-box p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+ 
+  position: relative;
+  padding-left: 20px;
+
+
+.typewriter::before {
+  content: "|";
+  position: absolute;
+  left: 0;
+  color: #00ff00;
+  animation: blink 0.75s step-end infinite;
+}
+
+/* Blinking and Typing */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Page Fade-In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  font-family: monospace;
+  font-size: 36px;
+  margin: 50px auto;
+  color: #5aff60;
+  border-right: 2px solid #5aff60; /* Cursor */
+  width: 0;
+  animation: typing 2.5s steps(12,end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Typing Effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12ch; }  /* Adjust 'ch' to match text length */
+}
+
+/* Blinking Cursor */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #5aff60; }
+}

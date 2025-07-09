@@ -1,0 +1,125 @@
+ body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f2b25;
+  color: white;
+  text-align: center;
+}
+
+.skills-section {
+  padding: 60px 20px;
+}
+
+.skills-section h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.skills-section .highlight {
+  color: #7fff00;
+  border-bottom: 2px solid #7fff00;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.skill-circle {
+  text-align: center;
+}
+
+.outer-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#7fff00 0% 85%, #2d3e38 85% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.skill-circle:nth-child(2) .outer-circle {
+  background: conic-gradient(#7fff00 0% 90%, #2d3e38 90% 100%);
+}
+
+.skill-circle:nth-child(3) .outer-circle {
+  background: conic-gradient(#7fff00 0% 75%, #2d3e38 75% 100%);
+}
+
+.skill-circle:nth-child(4) .outer-circle {
+  background: conic-gradient(#7fff00 0% 95%, #2d3e38 95% 100%);
+}
+
+.inner-circle {
+  background-color: #0f2b25;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(7, 243, 77);
+}
+
+.skill-circle p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  background-color: #0f2b25; /* Your background color */
+}
+
+.typewriter {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;  /* | cursor color */
+  width: 0;
+  animation: typing 2s steps(10), blink 0.75s step-end infinite;
+  color: rgb(48, 235, 48);                   /* Text color */
+  margin: 40px auto 0;            /* Top margin + horizontal center */
+  display: block;
+  text-align: center;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 7ch; } /* Adjust for character count (|Skills = 7ch) */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typewriter {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  width: fit-content;
+  animation: typing 2s steps(10) forwards, blink 0.75s step-end infinite;
+  color: rgb(32, 255, 69);
+  margin: 50px auto 0;
+  display: block;
+  text-align: center;
+}
+body {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

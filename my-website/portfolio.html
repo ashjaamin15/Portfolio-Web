@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <div>
+    <section class="portfolio-section">
+    <div class="typewriter-wrapper">
+  <h1 class="typewriter">|Portfolio</h1>
+    </div>
+     
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="uiux">UI/UX</button>
+        <button class="filter-btn" data-filter="brand">Brand</button>
+        <button class="filter-btn" data-filter="media">Media</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item uiux"><img src="image1.jpg" alt="UI/UX 1"></div>
+        <div class="portfolio-item uiux"><img src="image2.jpg" alt="UI/UX 2"></div>
+        <div class="portfolio-item media"><img src="image3.jpg" alt="Media 1"></div>
+        <div class="portfolio-item uiux"><img src="image4.jpg" alt="UI/UX 3"></div>
+        <div class="portfolio-item brand"><img src="image5.jpg" alt="Brand 1"></div>
+        <div class="portfolio-item media"><img src="image6.jpg" alt="Media 2"></div>
+        <div class="portfolio-item uiux"><img src="image7.jpg" alt="UI/UX 4"></div>
+        <div class="portfolio-item brand"><img src="image8.jpg" alt="Brand 2"></div>
+        <div class="portfolio-item media"><img src="image9.jpg" alt="Media 3"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const buttons = document.querySelectorAll(".filter-btn");
+    const items = document.querySelectorAll(".portfolio-item");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.getAttribute("data-filter");
+
+        items.forEach(item => {
+          item.style.display = (filter === "all" || item.classList.contains(filter)) ? "block" : "none";
+        });
+      });
+    });
+    document.getElementById("typewriter-text").textContent = "Portfolio";
+
+  </script>
+
+</body>
+</html>
+

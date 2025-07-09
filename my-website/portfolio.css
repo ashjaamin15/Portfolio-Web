@@ -1,0 +1,142 @@
+body {
+  background-color: #0f1d1f;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: limegreen;
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: limegreen;
+  color: black;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #fff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* optional */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+ body {
+  background-color: black;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.typewriter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  text-align: center;
+}
+
+.typewriter {
+  color: #00FF00;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00FF00;
+  width: 0;
+  animation: typing 2.5s steps(9, end) forwards, blink-caret 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 9ch }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent }
+}
+
+.center-heading .portfolio-grid{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5rem;
+}
+
+.highlight {
+  color: #00ff73;
+  border-bottom: 2px solid #00ff73;
+  padding-bottom: 5px;
+}
+
+.center {
+  text-align: center;
+}
+ /* Centered wrapper */
+.typewriter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px; /* space from top */
+  margin-bottom: 40px; /* 👈 gap below heading */
+}
+
+/* Typewriter animation */
+.typewriter {
+  color: #00FF00;
+  font-size: 2.5rem;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00FF00;
+  width: 0;
+  animation: typing 2.5s steps(10, end) forwards, blink-caret 0.7s step-end infinite;
+}
+
+/* Adjust typing length */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 10ch } /* 'Portfolio' = 9 + | = 10 chars */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00FF00 }
+}
+
+}
+
